@@ -1,0 +1,139 @@
+/* ================ Global =================== */
+:root{
+    --custom_black: #171717;
+    --custom_white: #e9e1d3;
+    --custom_dark_red: #6b1415;
+    --custom_red: #9b1e1e;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--custom_white);
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.container{
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* ================ Titles =================== */
+h2{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--custom_black);
+    font-weight: normal;
+}
+
+/* ================ Header =================== */
+header{
+    background-color: var(--custom_dark_red);
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+#logo{
+    color: var(--custom_white);
+    font-weight: 100;
+}
+
+/* ================ Balance =================== */
+#balance{
+    margin-top: -7rem;
+}
+#balance h2{
+    color: var(--custom_white);
+    margin-top: 0;
+}
+
+/* ================ Cards =================== */
+.card{
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1.75rem;
+    color: var(--custom_black);
+}
+
+.card h3{
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--custom_black);
+}
+
+.card p{
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 100;
+    margin-top: 0.8rem;
+    color: var(--custom_black);
+}
+
+.card.total{
+    background-color: var(--custom_red);
+}
+
+.card.total h3, .card.total p{
+    color: white;
+}
+
+/* ================ Table =================== */
+#data_table{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+}
+
+table thead tr th:first-child, table tbody tr td:first-child{
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+
+table thead th{
+    background-color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table tbody td{
+    background-color: whitesmoke;
+    font-weight: 100;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table tbody tr{
+    opacity: 0.75;
+}
+
+table tbody tr:hover{
+    opacity: 1;
+
+}
+
+td.description{
+    color: var(--custom_black);
+}
+
+td.expense{
+    color: var(--custom_red);
+}
+
+td.income{
+    color: #197b30;
+}
+
+td.date{
+    color: var(--custom_black);
+}
+
+/* ================ Footer =================== */
+footer{
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--custom_black);
+    opacity: 0.8;
+}
