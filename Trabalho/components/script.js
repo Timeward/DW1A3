@@ -35,14 +35,31 @@ const transactions = [
 
 
 const Transaction ={
+    all: transactions,
+    add(transaction){
+        Transaction.all.push(transaction)
+        App.reload()
+    },
     incomes(){
-        //somar as entradas
+        let income = 0
+        Transaction.all.forEach(transaction =>{
+            if(transaction.amount > 0){
+                income += transaction.amount
+            }
+        })
+        return income;
     },
     expenses(){
-        //somar as saidas
+        let expense = 0
+        Transaction.all.forEach(transaction =>{
+            if(transaction.amount < 0){
+                expense += transaction.amount
+            }
+        })
+        return expense;
     },
     total(){
-
+        return Transaction.incomes() + Transaction.expenses();
     }
     
 }
@@ -63,13 +80,27 @@ const DOM ={
 
         const html = `
         <td class="description">${transaction.description}</td>
-        <td class="${CSSclass}">${transaction.amount}</td>
+        <td class="${CSSclass}">${amount}</td>
         <td class="date">${transaction.date}</td>
         <td>
             <img src="./assets/minus.svg" alt="minus_symbol">
         </td>
         `
         return html
+    },
+    updateBalance(){
+        document
+            .getElementById('incomeDisplay')
+            .innerHTML = Utils.formatCurrency(Transaction.incomes())
+        document
+            .getElementById('expenseDisplay')
+            .innerHTML = Utils.formatCurrency(Transaction.expenses())
+        document
+            .getElementById('totalDisplay')
+            .innerHTML = Utils.formatCurrency(Transaction.total())
+    },
+    clearTransactions(){
+        DOM.transactionsContainer.innerHTML = ""
     }
 }
 
@@ -77,10 +108,39 @@ const DOM ={
 const Utils ={
     formatCurrency(value){
         const signal = Number(value) < 0 ? "-" : ""
+
+        value = String(value).replace(/\D/g, "")
+
+        value = Number(value)/100
+
+        value = value.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        })
+
+        return signal + value
     }
 }
 
+const App = {
+    init(){
+        Transaction.all.forEach(transaction =>{
+            DOM.addTransaction(transaction)
+        })
+        
+        DOM.updateBalance()
+    },
+    reload(){
+        DOM.clearTransactions()
+        App.init()
+    }
+}
 
-transactions.forEach(function(transaction){
-    DOM.addTransaction(transaction)
+App.init()
+
+Transaction.add({
+    id: 39,
+    description: 'alo',
+    amount: 200,
+    date: '23/03/2023'
 })
