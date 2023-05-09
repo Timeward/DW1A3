@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 html{
@@ -20,11 +21,35 @@ html{
 body{
     background-color: var(--custom_black);
     color: var(--custom_white);
-    font-family: 'Comfortaa', sans-serif;
 }
 
 header{
     background-color: var(--custom_dark_red);
     padding: 2rem 0 4rem;
     text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#dropform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    background-color: var(--custom_black);
+    font-size: large;
+    font-weight: bold;
+}
+
+#dropdown{
+    border: none;
+    border-radius: .5rem;
+    margin: .35rem;
+    padding: .65rem;
+    background-color: var(--custom_red);
+    color: var(--custom_white);
+    font-size: medium;
 }
