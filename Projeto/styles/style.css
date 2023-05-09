@@ -1,0 +1,30 @@
+:root{
+    --custom_black: #171717;
+    --custom_white: #e9e1d3;
+    --custom_dark_red: #6b1415;
+    --custom_red: #9b1e1e;
+    --custom_green: #197b30;
+    --custom_lightgreen: #25b346;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    background-color: var(--custom_black);
+    color: var(--custom_white);
+    font-family: 'Comfortaa', sans-serif;
+}
+
+header{
+    background-color: var(--custom_dark_red);
+    padding: 2rem 0 4rem;
+    text-align: center;
+}
