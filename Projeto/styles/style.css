@@ -53,3 +53,52 @@ form{
     color: var(--custom_white);
     font-size: medium;
 }
+
+label{
+    margin: .6rem;
+}
+
+.resize{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.hex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+div h3{
+    margin-left: .6rem;
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+}
+
+input{
+    display: flex;
+    padding: .65rem;
+    flex-direction: column;
+}
+
+output{
+    display: flex;
+    padding: .65rem;
+    flex-direction: column;
+}
+
+@media(max-width: 800px){
+    html{
+        font-size: 87.5%;
+    }
+
+    #resize{
+        display: grid;
+        grid-template-columns: repeat(2);
+        gap: 1rem;
+        text-align: center;
+    }
+}
