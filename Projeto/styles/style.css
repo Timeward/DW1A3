@@ -82,12 +82,15 @@ input{
     display: flex;
     padding: .65rem;
     flex-direction: column;
+    border-radius: .5rem;
 }
 
 output{
     display: flex;
     padding: .65rem;
     flex-direction: column;
+    background-color: var(--custom_white);
+    color: black;
 }
 
 @media(max-width: 800px){
