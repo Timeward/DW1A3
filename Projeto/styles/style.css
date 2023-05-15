@@ -56,20 +56,44 @@ form{
 
 label{
     margin: .6rem;
-}
-
-#resizeDiv{
-    display:none;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem;
+    margin-left: 0rem;
 }
 
 .showDiv{
     display: flex !important;
 }
 
+#resizeDiv{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 1rem;
+}
+
+#inputA, #inputB, #inputC, #inputD{
+    margin-top: 4rem;
+}
+
+label[for="inputA"], label[for="inputB"], label[for="inputC"], label[for="inputD"], #equalSignResize{
+    margin-top: 4.75rem;
+}
+
+.explanation {
+    position: absolute;
+    top: -1rem; /* adjust this value as needed */
+    text-align: center;
+    width: 100%;
+  }
+
 #hexDiv{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+#ovalDiv{
     display:none;
     align-items: center;
     justify-content: center;
@@ -87,25 +111,20 @@ input{
     padding: .65rem;
     flex-direction: column;
     border-radius: .5rem;
+    background-color: var(--custom_white);
 }
 
 output{
     display: flex;
-    padding: .65rem;
+    padding: 1.2rem;
     flex-direction: column;
     background-color: var(--custom_white);
     color: black;
+    width: 175px;
+    border-radius: .5rem;
 }
 
 @media(max-width: 800px){
     html{
         font-size: 87.5%;
     }
-
-    #resize{
-        display: grid;
-        grid-template-columns: repeat(2);
-        gap: 1rem;
-        text-align: center;
-    }
-}
