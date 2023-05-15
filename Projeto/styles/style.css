@@ -58,15 +58,15 @@ label{
     margin: .6rem;
 }
 
-.resize{
-    display:flex;
+#resize{
+    display:none;
     align-items: center;
     justify-content: center;
     margin: 1rem;
 }
 
-.hex{
-    display:flex;
+#hex{
+    display:none;
     align-items: center;
     justify-content: center;
     margin: 1rem;
