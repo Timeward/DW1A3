@@ -58,14 +58,18 @@ label{
     margin: .6rem;
 }
 
-#resize{
+#resizeDiv{
     display:none;
     align-items: center;
     justify-content: center;
     margin: 1rem;
 }
 
-#hex{
+.showDiv{
+    display: flex !important;
+}
+
+#hexDiv{
     display:none;
     align-items: center;
     justify-content: center;
