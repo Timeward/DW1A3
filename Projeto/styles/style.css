@@ -124,7 +124,41 @@ output{
     border-radius: .5rem;
 }
 
-@media(max-width: 800px){
-    html{
-        font-size: 87.5%;
+@media (max-width: 1020px){
+
+    #resizeDiv{
+        position: relative;
+        flex-direction: column;
     }
+
+    #hexDiv{
+        position: relative;
+        flex-direction: column;
+    }
+
+    #ovalDiv{
+        position: relative;
+        flex-direction: column;
+    }
+    
+    label{
+        margin: 0;
+    }
+
+    input{
+        margin: 0;
+    }
+
+    #inputA, #inputB, #inputC, #inputD{
+        margin-top: 0rem;
+    }
+    
+    #inputB{
+        margin-bottom: 1rem;
+    }
+
+    label[for="inputB"], label[for="inputC"], label[for="inputD"], #equalSignResize{
+        margin-top: 0rem;
+    }
+
+}
