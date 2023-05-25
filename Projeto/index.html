@@ -10,9 +10,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
         <script src="./components/showDivScript.js"></script>
-        <script src="./components/hexCalc.js"></script>
-        <script src="./components/ovalCalc.js"></script>
-        <script src="./components/resizeCalc.js"></script>
     </head>
 
 
@@ -36,8 +33,8 @@
         <div id="resizeDiv">
 
             <h3 class="explanation">Campos A e B: Comprimento e altura da imagem atual.<br>
-                Campos C e D: em um, coloque o comprimento ou altura desejado.<br>
-                O resultado proporcional irá aparecer no outro campo.</h3>
+                Campo C: coloque o comprimento ou altura desejado (referente a 'A').<br>
+                O resultado proporcional irá aparecer em D.</h3>
 
             <label for="inputA"><h3>A:</h3></label>
             <input type="number" id="inputA" name="inputA" required>
@@ -50,8 +47,8 @@
             <label for="inputC"><h3>C:</h3></label>
             <input type="number" id="inputC" name="inputC" required>
         
-            <label for="inputD"><h3>D:</h3></label>
-            <input type="number" id="inputD" name="inputD" required>
+            <label for="resultD"><h3>D:</h3></label>
+            <output id="outputD" name="outputD">
         
         </div>
 
@@ -63,7 +60,7 @@
             <h3>=</h3>
 
             <label for="result"><h3>Área:</h3></label>
-            <output id="result" value="0"></output>
+            <output id="hexResult" value="0"></output>
 
 
         </div>
@@ -85,7 +82,7 @@
             <h3>=</h3>
 
             <label for="result"><h3>Área:</h3></label>
-            <output id="result" value="0"></output>
+            <output id="ovalResult" value="0"></output>
 
         </div>
     </main>
