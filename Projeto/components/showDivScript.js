@@ -9,6 +9,15 @@ function show(selectValue){
 
     if(selectValue === "resize"){
         showResizeDiv.classList.add("showDiv");
+        
+        const resizeInputA = document.querySelector("#inputA")
+        const resizeInputB = document.querySelector("#inputB")
+        const resizeInputC = document.querySelector("#inputC")
+        const resizeOutputD = document.querySelector("#outputD")
+        var resizeOutputValue = 0
+        resizeOutputD.value = resizeOutputValue.toFixed(3)
+
+        
     }
 
     if(selectValue === "hex"){
