@@ -71,11 +71,11 @@ label{
     margin: 1rem;
 }
 
-#inputA, #inputB, #inputC, #inputD{
+#inputA, #inputB, #inputC, #outputD{
     margin-top: 4rem;
 }
 
-label[for="inputA"], label[for="inputB"], label[for="inputC"], label[for="inputD"], #equalSignResize{
+label[for="inputA"], label[for="inputB"], label[for="inputC"], label[for="outputD"], #equalSignResize{
     margin-top: 4.75rem;
 }
 
@@ -116,10 +116,10 @@ input{
 
 output{
     display: flex;
-    padding: 1.2rem;
+    padding: .65rem;
     flex-direction: column;
-    background-color: var(--custom_white);
-    color: black;
+    background-color: var(--custom_dark_red);
+    color: white;
     width: 220px;
     border-radius: .5rem;
 }

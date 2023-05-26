@@ -17,7 +17,16 @@ function show(selectValue){
         var resizeOutputValue = 0
         resizeOutputD.value = resizeOutputValue.toFixed(3)
 
-        
+        function resizeEvent(){
+            
+            resizeOutputValue = (resizeInputB.value*resizeInputC.value)/resizeInputA.value;
+
+            resizeOutputD.value = resizeOutputValue.toFixed(3);
+        }
+          
+        resizeInputA.addEventListener("keyup", resizeEvent)
+        resizeInputB.addEventListener("keyup", resizeEvent)
+        resizeInputC.addEventListener("keyup", resizeEvent)
     }
 
     if(selectValue === "hex"){
@@ -38,5 +47,21 @@ function show(selectValue){
 
     if(selectValue === "oval"){
         showOvalDiv.classList.add("showDiv");
+        
+        const ovalInputA = document.querySelector("#radiusA")
+        const ovalInputB = document.querySelector("#radiusB")
+        const ovalOutput = document.querySelector("#ovalResult")
+        var ovalAreaValue = 0
+        ovalOutput.value = ovalAreaValue.toFixed(3);
+
+        function ovalEvent(){
+
+            ovalAreaValue = Math.PI*ovalInputA.value*ovalInputB.value
+
+            ovalOutput.value = ovalAreaValue.toFixed(3);
+        }
+
+        ovalInputA.addEventListener("keyup", ovalEvent)
+        ovalInputB.addEventListener("keyup", ovalEvent)
     }
 }
