@@ -162,6 +162,7 @@ output{
     }
     
     #outputD{
+        margin-top: 0rem;
         width: 220px;
     }
 
