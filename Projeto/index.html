@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
         <script src="./components/showDivScript.js"></script>
+        <script src="./components/reset.js"></script>
     </head>
 
 
@@ -23,7 +24,7 @@
             <label for="formula">Fórmula</label>
             <select id="dropdown" name="formulas" onchange="show(this.value)">
                 <option value="default">Selecione uma Fórmula</option>
-                <option value="resize">Tamanho Proporcional</option>
+                <option value="resize">Multiplicação Cruzada</option>
                 <option value="hex">Área de Hexagono</option>
                 <option value="oval">Área de Elipsóide</option>
             </select>
@@ -31,10 +32,6 @@
 
 
         <div id="resizeDiv">
-
-            <h3 class="explanation">Campos A e B: Comprimento e altura da imagem atual.<br>
-                Campo C: coloque o comprimento ou altura desejado (referente a 'A').<br>
-                O resultado proporcional irá aparecer em D.</h3>
 
             <label for="inputA"><h3>A:</h3></label>
             <input type="number" id="inputA" name="inputA" required>
@@ -86,5 +83,9 @@
 
         </div>
     </main>
+    <footer>
+        <h3>Number Cruncher by Timeward<br></h3>
+        <h4>Licensed under GNU GPL 3.0</h4>
+    </footer>
 </body>
 </html>

@@ -71,21 +71,6 @@ label{
     margin: 1rem;
 }
 
-#inputA, #inputB, #inputC, #outputD{
-    margin-top: 4rem;
-}
-
-label[for="inputA"], label[for="inputB"], label[for="inputC"], label[for="outputD"], #equalSignResize{
-    margin-top: 4.75rem;
-}
-
-.explanation {
-    position: absolute;
-    top: -1rem; /* adjust this value as needed */
-    text-align: center;
-    width: 100%;
-  }
-
 #hexDiv{
     display:none;
     align-items: center;
@@ -117,11 +102,29 @@ input{
 output{
     display: flex;
     padding: .65rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
     flex-direction: column;
     background-color: var(--custom_dark_red);
     color: white;
     width: 220px;
     border-radius: .5rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer h3{
+    opacity: .75;
+}
+
+footer h4{
+    opacity: .45;
 }
 
 @media (max-width: 1020px){

@@ -20,7 +20,11 @@ function show(selectValue){
         function resizeEvent(){
             
             resizeOutputValue = (resizeInputB.value*resizeInputC.value)/resizeInputA.value;
-
+            
+            if(isNaN(resizeOutputValue)){
+                resizeOutputValue = 0
+            }
+            
             resizeOutputD.value = resizeOutputValue.toFixed(3);
         }
           
